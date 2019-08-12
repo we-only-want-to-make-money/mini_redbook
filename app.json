@@ -1,0 +1,58 @@
+{
+    "pages": [
+        "hong_hui/index/index",
+        "hong_hui/video/video",
+        "hong_hui/user/user",
+        "hong_hui/content/content",
+        "hong_hui/kai/kai",
+        "hong_hui/kefu/kefu",
+        "hong_hui/art/art",
+        "pages/log/log",
+        "hong_hui/yuan/yuan",
+        "hong_hui/yuan1/yuan1"
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#f5eded",
+        "navigationBarTitleText": "红薯库",
+        "backgroundColor": "#ffffff",
+        "enablePullDownRefresh": false,
+        "backgroundTextStyle": "dark"
+    },
+    "tabBar": {
+        "color": "#7F8389",
+        "selectedColor": "#d81e06",
+        "borderStyle": "black",
+        "list": [
+            {
+                "text": "图片下载",
+                "pagePath": "hong_hui/index/index",
+                "iconPath": "resources/89f11422d0245aea4ecb4053f7c45dc9.png",
+                "selectedIconPath": "resources/bb4d8b71de73a8d42578983ccdbf6abd.png"
+            },
+            {
+                "text": "视频下载",
+                "pagePath": "hong_hui/video/video",
+                "iconPath": "resources/46e9ec5624cb1a461b5e25aec085cd08.png",
+                "selectedIconPath": "resources/084f744e8e8c36ef3ffdadcdfe614bd5.png"
+            },
+            {
+                "text": "文案复制",
+                "pagePath": "hong_hui/art/art",
+                "iconPath": "resources/art.png",
+                "selectedIconPath": "resources/arts.png"
+            },
+            {
+                "text": "个人中心",
+                "pagePath": "hong_hui/user/user",
+                "iconPath": "resources/829693cf404ff396ecf1cce49cb2d07a.png",
+                "selectedIconPath": "resources/216b250480b2ae97298f13e074b07f07.png"
+            }
+        ],
+        "backgroundColor": "#F7F7FA"
+    },
+    "navigateToMiniProgramAppIdList": [
+        "wx4b7865399a463d1f"
+    ],
+    "debug": true
+}

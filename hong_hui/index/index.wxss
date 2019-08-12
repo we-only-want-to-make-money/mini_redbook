@@ -1,0 +1,7 @@
+page {
+    background-color: rgba(245,237,237,1);
+}
+
+button::after {
+    border: none;
+}

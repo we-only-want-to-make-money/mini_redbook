@@ -1,0 +1,44 @@
+<block wx:if="{{auth==1}}">
+    <view class="c-minheight"></view>
+    <view class="c-minheight wx-view_OliVd4">
+        <view class=" wx-view_hRqpHw">
+            <open-data class="wx-image_LeqAe3" type="userAvatarUrl"></open-data>
+        </view>
+        <text class="c-block wx-text_hRY8H3">用户:{{usermes.name}}</text>
+        <block wx:if="{{usermes.show==2&&usermes.show4==4}}">
+            <view class="c-minheight wx-view_PIJ3fu"></view>
+            <view class="c-minheight wx-view_tQXbEc">
+                <view class="c-minheight wx-view_29AWiW">
+                    <text class="c-block wx-text_IwcrWU" wx:if="{{usermes.type==1}}">到期时间：{{usermes.mes}}</text>
+                    <text class="c-block wx-text_IwcrWU" wx:if="{{usermes.type==2}}">本月剩余次数：{{5-usermes.mes}}次</text>
+                </view>
+            </view>
+            <view class="c-minheight wx-view_PIJ3fu"></view>
+            <view class="c-minheight wx-view_tQXbEc">
+                <text class="c-block wx-text_PI9vm5">联系客服</text>
+            </view>
+            <view class="c-minheight wx-view_wNakqa">
+                <button class=" wx-view_ZXwsGx" openType="contact" sessionFrom="weapp">
+                    <text class="c-block wx-text_ohl43r" style="font-size:12px">{{usermes.mes1}}</text>
+                </button>
+                <button class=" wx-view_ZXwsGx" openType="contact" sessionFrom="weapp">
+                    <text class="c-block wx-text_ohl43r" style="font-size:12px">{{usermes.mes2}}</text>
+                </button>
+            </view>
+        </block>
+        <view bindtap="tokefu" class="c-minheight wx-view_Nxk71z">
+            <text class="c-block wx-text_1coBlw">客服及教程</text>
+            <image class="wx-image_olsNIn" mode="scaleToFill" src="http://qty83k.creatby.com/materials/104133/origin/df54621333b3ea99565697a7f6bc70bc_origin.png"></image>
+        </view>
+        <view class="c-minheight wx-view_D7Lgdd"></view>
+    </view>
+</block>
+<view class="top" wx:if="{{auth==2}}">
+    <view class="c-minheight wx-view_SQ4g8q" style="margin-top:20px;">
+        <image class="wx-image_qNznLo" mode="scaleToFill" src="/resources/logo.png"></image>
+        <text class="c-block wx-text_zA9Sxd" style="margin-top:20px;">个人中心页面需获取用户信息授权</text>
+    </view>
+    <view style="margin-top:20px;padding:20px;">
+        <button bindgetuserinfo="bindGetUserInfo" openType="getUserInfo" style="background-color:rgba(249,6,6,1);color:#ffffff;">微信登录</button>
+    </view>
+</view>

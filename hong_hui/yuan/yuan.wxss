@@ -1,0 +1,42 @@
+page {
+    background-color: rgba(245,237,237,1);
+}
+
+.wx-text_EvfQ3j {
+    color: rgb(240,24,115);
+    text-align: center;
+}
+
+.wx-view_eVLK5W {
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wx-view_8oRIk6 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wx-text_hvOgq2 {
+    font-size: 14px;
+}
+
+.wx-view_Ut9k8D {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+}
+
+.wx-text_NYwiWB {
+    font-size: 16px;
+    color: #4251db;
+}
+
+.wx-video_lz2pOw {
+    height: 500px;
+    width: 100%;
+}

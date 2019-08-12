@@ -1,0 +1,19 @@
+<view class="c-minheight wx-view_xEyPTw">
+    <view class="c-minheight wx-view_edlpGS">
+        <view class="c-minheight wx-view_8C1wd9">
+            <text class="c-block wx-text_I3c31s wx-input_jYKNwB">客服微信号：{{wxname}}</text>
+        </view>
+        <view class="c-minheight wx-view_vAq8NP">
+            <view bindtap="copy" class="c-minheight wx-view_3Mvbeu">
+                <text class="c-block wx-text_vs7uhi">点击复制客服微信号</text>
+            </view>
+        </view>
+        <view class="c-minheight wx-view_8C1wd9">
+            <text class="c-block wx-text_I3c31s wx-input_jYKNwB">图片视频下载教程</text>
+        </view>
+    </view>
+</view>
+<import src="../../wxParse/wxParse.wxml"></import>
+<view class="c-minheight  wxParse">
+    <template is="wxParse" data="{{wxParseData:article1.nodes}}"></template>
+</view>

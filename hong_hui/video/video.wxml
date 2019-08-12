@@ -1,0 +1,45 @@
+<view class="c-minheight wx-view_SQ4g8q">
+    <image class="wx-image_qNznLo" mode="scaleToFill" src="/resources/logo.png"></image>
+    <text class="c-block wx-text_zA9Sxd">我们专注素材下载</text>
+</view>
+<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+    <view class="c-minheight wx-view_cwapW7">
+        <view class="c-minheight wx-view_cyXTEB">
+            <input bindinput="inputUrl" class="c-block c-fullwidth wx-input_vUnSEH" name="input1" placeholder="请输入小红书视频链接" type="text" value="{{url}}"></input>
+        </view>
+    </view>
+    <view class="c-minheight wx-view_UvusPP">
+        <view bindtap="postUrl" class="c-minheight wx-view_sTc7JA" style="margin-right:10px">
+            <text class="c-block wx-text_UQQlAp" style="font-size:16px;">获取视频</text>
+        </view>
+        <view class="c-minheight wx-view_sTc7JA">
+            <button class="c-block wx-text_UQQlAp" formType="submit" style="background-color:rgba(249,6,6,1);min-height:38px;height:38px;line-height:38px;color:#ffffff;font-size:16px;">获取原视频</button>
+        </view>
+    </view>
+</form>
+<view class="video" wx:if="{{showvideo}}">
+    <view class="c-minheight wx-view_RFvvVb">
+        <text class="c-block wx-text_AQkxqv">小红书视频</text>
+    </view>
+    <video danmuBtn enableDanmu controls="true" id="myVideo" poster="{{video.lunimg}}" src="{{video.video}}"></video>
+    <view class="c-minheight wx-view_pRI4ZP" wx:if="{{video.size<10}}">
+        <view bindtap="savevideo" class="c-minheight wx-view_evIeKh">
+            <text class="c-block wx-text_1liibK">保存视频至手机相册</text>
+        </view>
+    </view>
+    <view class="c-minheight wx-view_pRI4ZP">
+        <view bindtap="copyvideo" class="c-minheight wx-view_evIeKh">
+            <text class="c-block wx-text_1liibK">复制视频链接</text>
+        </view>
+    </view>
+    <view class="c-minheight wx-view_RFvvVb" wx:if="{{video.size<10}}">
+        <text class="c-block wx-text_AQkxqv">可直接下载或复制链接下载</text>
+    </view>
+    <view class="c-minheight wx-view_RFvvVb" wx:if="{{video.size>=10}}">
+        <text class="c-block wx-text_AQkxqv">由于小程序功能限制大于10M的视频，请复制链接下载</text>
+    </view>
+</view>
+<view class="c-minheight wx-view_wxiTgZ">
+    <text bindtap="towei_bo" class="c-block wx-text_MIztJw">短视频解析下载</text>
+    <text bindtap="tokefu" class="c-block wx-text_MIztJw">客服及教程</text>
+</view>

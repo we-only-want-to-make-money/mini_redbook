@@ -1,0 +1,65 @@
+@import "../../wxParse/wxParse.wxss";
+
+page {
+    background-color: rgba(245,237,237,1);
+}
+
+.wx-view_xQ9Ruf {
+    padding: 15px;
+    padding-right: 15px;
+}
+
+.wx-view_xEyPTw {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wx-view_EcrTNr {
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wx-text_I3c31s {
+    font-size: 16px;
+    text-align: center;
+}
+
+.wx-view_8C1wd9 {
+    min-height: 40px;
+    background-color: rgba(212,197,197,0.1);
+}
+
+.wx-input_jYKNwB {
+    height: 40px;
+    line-height: 40px;
+}
+
+.wx-view_vAq8NP {
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wx-view_3Mvbeu {
+    min-height: 35px;
+    width: 100%;
+    background-color: rgb(199,103,103);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wx-text_vs7uhi {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.wx-view_Wz9O4r {
+    padding: 15px;
+    padding-right: 15px;
+}

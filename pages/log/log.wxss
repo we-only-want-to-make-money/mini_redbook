@@ -1,0 +1,58 @@
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bk {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100rpx;
+    color: yellow;
+    font-size: 20px;
+    padding-top: 100rpx;
+    font-weight: bold;
+}
+
+.head2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100rpx;
+    color: yellow;
+    font-size: 20px;
+    padding: 20rpx;
+    font-weight: bold;
+    margin-top: 60rpx;
+}
+
+.body {
+    padding: 0 40rpx;
+    color: white;
+    font-size: 14px;
+}
+
+.bottomimg {
+    width: 80%;
+    height: 600rpx;
+    padding-top: 20rpx;
+}
+
+.huanyige {
+    width: 40%;
+    height: 100rpx;
+    margin-top: 20rpx;
+    background-color: yellow;
+}

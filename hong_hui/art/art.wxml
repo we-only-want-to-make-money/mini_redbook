@@ -1,0 +1,59 @@
+<view class="c-minheight wx-view_SQ4g8q">
+    <image class="wx-image_qNznLo" mode="scaleToFill" src="/resources/logo.png"></image>
+    <text class="c-block wx-text_zA9Sxd">我们专注素材下载</text>
+</view>
+<view class="c-minheight wx-view_cwapW7">
+    <view class="c-minheight wx-view_cyXTEB">
+        <input bindinput="inputUrl" class="c-block c-fullwidth wx-input_vUnSEH" name="input1" placeholder="请输入小红书文案链接" type="text" value="{{url}}"></input>
+    </view>
+</view>
+<view class="c-minheight wx-view_UvusPP">
+    <view bindtap="postUrl" class="c-minheight wx-view_sTc7JA" style="margin-right:10px">
+        <text class="c-block wx-text_UQQlAp">获取文案</text>
+    </view>
+    <view bindtap="clear" class="c-minheight wx-view_sTc7JA">
+        <text class="c-block wx-text_UQQlAp">清空链接</text>
+    </view>
+</view>
+<view class="c-minheight wx-view_tyb3Ns" wx:if="{{art}}">
+    <view class="c-minheight wx-view_bRKuyf">
+        <view bindtap="changeShowtype" class="c-minheight wx-view_BGLGPk {{showtype==1?'choose-view':''}}">
+            <text class="c-block wx-text_fizACx {{showtype==1?'choose-text':''}}">整体复制</text>
+        </view>
+        <view bindtap="changeShowtype" class="c-minheight wx-view_3cPWb5 {{showtype==2?'choose-view':''}}">
+            <text class="c-block wx-text_PEajnu {{showtype==2?'choose-text':''}}">选择复制</text>
+        </view>
+    </view>
+</view>
+<block wx:if="{{showtype==1}}">
+    <view class="c-minheight wx-view_bKHlIC" wx:if="{{art}}">
+        <text class="c-block wx-text_aaFbA1" style="padding:15px">{{art}}</text>
+        <view bindtap="artcopy" class="c-minheight wx-view_R2VyA0" style="margin-bottom:10px;">
+            <text class="c-block wx-text_dGDB5t">复制文案</text>
+        </view>
+    </view>
+</block>
+<block wx:if="{{showtype==2}}">
+    <view class="c-minheight wx-view_KopUei" wx:if="{{art}}">
+        <view class="c-minheight wx-view_RFvvVb">
+            <text class="c-block wx-text_AQkxqv" style="color:rgb(249, 6, 6);">请按顺序选择需要的内容（复制内容按照选择顺序复制）</text>
+        </view>
+        <checkbox-group bindchange="artlistChange" class="c-minheight ">
+            <label style="display:flex;" wx:for="{{artlist}}">
+                <view class="wx-image_wpdkTt" style="width:20px;height:20px;">
+                    <checkbox checked="" class="select-check " style="" value="{{item}}"></checkbox>
+                </view>
+                <text class="c-block wx-text_aaFbA1" id="{{index}}" style="padding:15px">{{item}}</text>
+            </label>
+        </checkbox-group>
+        <view class="c-minheight wx-view_pRI4ZP">
+            <view bindtap="copysartlist" class="c-minheight wx-view_evIeKh">
+                <text class="c-block wx-text_1liibK">复制选中的文案</text>
+            </view>
+        </view>
+    </view>
+</block>
+<view class="c-minheight wx-view_wxiTgZ">
+    <text bindtap="towei_bo" class="c-block wx-text_MIztJw">短视频解析下载</text>
+    <text bindtap="tokefu" class="c-block wx-text_MIztJw">客服微信</text>
+</view>

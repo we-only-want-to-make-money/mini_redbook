@@ -1,0 +1,39 @@
+<view class="c-minheight wx-view_xEyPTw">
+    <block wx:if="{{type==1}}">
+        <view class="c-minheight wx-view_edlpGS" wx:if="{{bind!=0}}">
+            <view class="c-minheight wx-view_EcrTNr">
+                <text class="c-block wx-text_I3c31s">VIP用户(ID:{{bind}})公众号下载开通成功</text>
+            </view>
+            <view class="c-minheight wx-view_vAq8NP">
+                <view bindtap="update" class="c-minheight wx-view_3Mvbeu">
+                    <text class="c-block wx-text_vs7uhi">同步公众号VIP到期时间</text>
+                </view>
+            </view>
+        </view>
+        <view class="c-minheight wx-view_edlpGS" wx:if="{{bind==0}}">
+            <view class="c-minheight wx-view_EcrTNr">
+                <text class="c-block wx-text_I3c31s">公众号会员ID</text>
+            </view>
+            <view class="c-minheight wx-view_8C1wd9">
+                <input bindinput="getid" class="c-block c-fullwidth wx-input_jYKNwB" name="input1" placeholder="请输入您的公众号会员ID" type="number"></input>
+            </view>
+            <view class="c-minheight wx-view_vAq8NP">
+                <view bindtap="upuser" class="c-minheight wx-view_3Mvbeu">
+                    <text class="c-block wx-text_vs7uhi">同步公众号会员VIP账号</text>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="c-minheight wx-view_edlpGS" wx:if="{{type==2}}">
+        <view class="c-minheight wx-view_EcrTNr">
+            <text class="c-block wx-text_I3c31s">你还不是VIP用户，请充<view style="display:none">.</view>值后重试</text>
+        </view>
+    </view>
+</view>
+<view class="c-minheight wx-view_8C1wd9">
+    <text class="c-block wx-text_I3c31s wx-input_jYKNwB" style="line-height:40px">公众号下载功能开通流程</text>
+</view>
+<import src="../../wxParse/wxParse.wxml"></import>
+<view class="c-minheight  wxParse">
+    <template is="wxParse" data="{{wxParseData:article1.nodes}}"></template>
+</view>

@@ -1,0 +1,10 @@
+<view class="content">
+    <image class="bk" src="/images/bk.jpg"></image>
+    <view class="head">相册相框精选</view>
+    <view class="head2">{{title[i]}}</view>
+    <view bindtap="huan" class="body">{{body[i]}}</view>
+    <image class="bottomimg" src="/images/1.jpg" wx:if="{{i==0}}"></image>
+    <image class="bottomimg" src="/images/2.jpg" wx:if="{{i==1}}"></image>
+    <image class="bottomimg" src="/images/3.jpg" wx:if="{{i==2}}"></image>
+    <button bindtap="huan" class="huanyige">换一则</button>
+</view>

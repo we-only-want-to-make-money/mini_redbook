@@ -1,0 +1,95 @@
+<view class="c-minheight wx-view_SQ4g8q">
+    <image class="wx-image_qNznLo" mode="scaleToFill" src="/resources/logo.png"></image>
+    <text class="c-block wx-text_zA9Sxd">我们专注素材下载</text>
+</view>
+<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+    <view class="c-minheight wx-view_cwapW7">
+        <view class="c-minheight wx-view_cyXTEB">
+            <input bindinput="inputUrl" class="c-block c-fullwidth wx-input_vUnSEH" name="input1" placeholder="请输入小红书图片链接" type="text" value="{{url}}"></input>
+        </view>
+    </view>
+    <view class="c-minheight wx-view_UvusPP">
+        <view bindtap="postUrl" class="c-minheight wx-view_sTc7JA" style="margin-right:10px">
+            <text class="c-block wx-text_UQQlAp" style="font-size:16px;">获取图片</text>
+        </view>
+        <view class="c-minheight wx-view_sTc7JA">
+            <button class="c-block wx-text_UQQlAp" formType="submit" style="background-color:rgba(249,6,6,1);min-height:38px;height:38px;line-height:38px;color:#ffffff;font-size:16px;">获取原图</button>
+        </view>
+    </view>
+</form>
+<view class="c-minheight wx-view_tyb3Ns" wx:if="{{lunimg}}">
+    <view class="c-minheight wx-view_bRKuyf">
+        <view bindtap="changeShowtype" class="c-minheight wx-view_BGLGPk {{showtype==1?'choose-view':''}}">
+            <text class="c-block wx-text_fizACx {{showtype==1?'choose-text':''}}">整体下载</text>
+        </view>
+        <view bindtap="changeShowtype" class="c-minheight wx-view_3cPWb5 {{showtype==2?'choose-view':''}}">
+            <text class="c-block wx-text_PEajnu {{showtype==2?'choose-text':''}}">选择下载</text>
+        </view>
+    </view>
+</view>
+<block wx:if="{{showtype==1}}">
+    <view class="c-minheight wx-view_bKHlIC" wx:if="{{lunimg}}">
+        <text class="c-block wx-text_aaFbA1">轮播图片(共{{lunimgnum}}张)</text>
+        <swiper class="wx-swiper_ELAo9c" indicatorDots="True" lowerThreshold="50">
+            <swiper-item class="c-full wx-swiper-item_hqxOCO" wx:for="{{lunimg}}">
+                <image class="wx-image_B3IkEr" mode="scaleToFill" src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <view bindtap="saveLunimg" class="c-minheight wx-view_R2VyA0">
+            <text class="c-block wx-text_dGDB5t">保存至手机相册</text>
+        </view>
+    </view>
+    <view class="c-minheight wx-view_bKHlIC" wx:if="{{wenimg}}">
+        <text class="c-block wx-text_aaFbA1">文章图片(共{{wenimgnum}}张)</text>
+        <swiper class="wx-swiper_ELAo9c" indicatorDots="True" lowerThreshold="50">
+            <swiper-item class="c-full wx-swiper-item_hqxOCO" wx:for="{{wenimg}}">
+                <image class="wx-image_B3IkEr" mode="scaleToFill" src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <view bindtap="saveWenimg" class="c-minheight wx-view_R2VyA0">
+            <text class="c-block wx-text_dGDB5t">保存至手机相册</text>
+        </view>
+    </view>
+</block>
+<block wx:if="{{showtype==2}}">
+    <view class="c-minheight wx-view_KopUei" wx:if="{{lunimg}}">
+        <view class="c-minheight wx-view_RFvvVb">
+            <text class="c-block wx-text_AQkxqv">轮播图片(共{{lunimgnum}}张)</text>
+        </view>
+        <checkbox-group bindchange="lunChange" class="c-minheight wx-view_Z3MDYI">
+            <label wx:for="{{lunimg}}">
+                <view class="wx-image_wpdkTt">
+                    <image bindtap="select" class="wx-image_wpdkTt-image" id="{{index}}" mode="scaleToFill" src="{{item}}"></image>
+                    <checkbox checked="" class="select-check " style="" value="{{item}}"></checkbox>
+                </view>
+            </label>
+        </checkbox-group>
+        <view class="c-minheight wx-view_pRI4ZP">
+            <view bindtap="saveslunimg" class="c-minheight wx-view_evIeKh">
+                <text class="c-block wx-text_1liibK">保存选中的图片至手机相册</text>
+            </view>
+        </view>
+    </view>
+    <view class="c-minheight wx-view_KopUei" wx:if="{{wenimg}}">
+        <view class="c-minheight wx-view_RFvvVb">
+            <text class="c-block wx-text_AQkxqv">文章图片(共{{wenimgnum}}张)</text>
+        </view>
+        <checkbox-group bindchange="wenChange" class="c-minheight wx-view_Z3MDYI">
+            <label wx:for="{{wenimg}}">
+                <view class="wx-image_wpdkTt">
+                    <image class="wx-image_wpdkTt-image" mode="scaleToFill" src="{{item}}"></image>
+                    <checkbox checked="" class="select-check " style="" value="{{item}}"></checkbox>
+                </view>
+            </label>
+        </checkbox-group>
+        <view class="c-minheight wx-view_pRI4ZP">
+            <view bindtap="saveswenimg" class="c-minheight wx-view_evIeKh">
+                <text class="c-block wx-text_1liibK">保存选中的图片至手机相册</text>
+            </view>
+        </view>
+    </view>
+</block>
+<view class="c-minheight wx-view_wxiTgZ">
+    <text bindtap="towei_bo" class="c-block wx-text_MIztJw">短视频解析下载</text>
+    <text bindtap="tokefu" class="c-block wx-text_MIztJw">客服及教程</text>
+</view>
