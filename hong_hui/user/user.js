@@ -35,6 +35,7 @@ Page({
                                     },
                                     cachetime: "0",
                                     success: function(t) {
+                                      console.log("unionid:"+t.data.data),
                                         console.log(t.data), e.setData({
                                             usermes: t.data.data
                                         });

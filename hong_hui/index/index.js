@@ -101,7 +101,7 @@ Page((n = {
                 url: n
             },
             success: function(n) {
-                wx.hideLoading(), console.log(n.data.data);
+              wx.hideLoading(), console.log("entry/wxapp/Image：" + JSON.stringify(n.data.data));
                 var e = n.data.data;
                 0 == e.lunimg.length ? wx.showToast({
                     title: "没有轮播图片",
@@ -347,7 +347,7 @@ t(n, "changeShowtype", function() {
     });
 }), t(n, "towei_bo", function() {
     wx.navigateToMiniProgram({
-        appId: "wx4b7865399a463d1f",
+      appId: "wx27c202a08d7bc3e0",
         path: "qu_y/pages/video/video",
         extarData: {},
         envVersion: "release",

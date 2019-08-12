@@ -1,9 +1,9 @@
 var i = {
-    uniacid: "3",
-    acid: "3",
+    uniacid: "2",
+    acid: "2",
     multiid: "0",
     version: "1.0",
-    siteroot: "https://honghui.noeon.cn/app/index.php",
+  siteroot: "https://www.91ye.top/app/index.php",
     design_method: "3"
 };
 

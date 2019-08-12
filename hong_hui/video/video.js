@@ -211,7 +211,7 @@ Page({
     onReachBottom: function() {},
     towei_bo: function() {
         wx.navigateToMiniProgram({
-            appId: "wx4b7865399a463d1f",
+          appId: "wx27c202a08d7bc3e0",
             path: "qu_y/pages/video/video",
             extarData: {},
             envVersion: "release",
