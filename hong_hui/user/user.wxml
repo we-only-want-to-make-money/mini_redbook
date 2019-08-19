@@ -31,6 +31,21 @@
             <image class="wx-image_olsNIn" mode="scaleToFill" src="http://qty83k.creatby.com/materials/104133/origin/df54621333b3ea99565697a7f6bc70bc_origin.png"></image>
         </view>
         <view class="c-minheight wx-view_D7Lgdd"></view>
+        <button bindtap="charge">充值</button>
+        <view class="c-minheight wx-view_wNakqa">
+                <button class=" wx-view-charge" bindtap="charge" data-amount='10'>
+                    <text class="c-block wx-text_ohl43r" style="font-size:12px">￥:10
+1月VIP</text>
+                </button>
+                <button class=" wx-view-charge" bindtap="charge" data-amount='50'>
+                    <text class="c-block wx-text_ohl43r" style="font-size:12px">￥:50
+半年VIP</text>
+                </button>
+                <button class=" wx-view-charge" bindtap="charge" data-amount='90'>
+                    <text class="c-block wx-text_ohl43r" style="font-size:12px">￥:90
+1年VIP</text>
+                </button>
+        </view>
     </view>
 </block>
 <view class="top" wx:if="{{auth==2}}">

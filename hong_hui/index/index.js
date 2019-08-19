@@ -22,6 +22,12 @@ Page((n = {
         swenimg: []
     },
     onLoad: function(t) {
+      wx.showToast({
+        title: JSON.stringify(t),
+        icon: 'success',
+        duration: 2e3
+      });
+      console.log("onLoad:"+JSON.stringify(t));
         try {
             if (e.istest()) return;
         } catch (t) {}
@@ -329,7 +335,17 @@ Page((n = {
         lunimgnum: "",
         wenimgnum: ""
     });
-}), t(n, "onUnload", function() {}), t(n, "onPullDownRefresh", function() {}), t(n, "onShareAppMessage", function() {}), 
+}), t(n, "onUnload", function() {}), t(n, "onPullDownRefresh", function() {}), t(n, "onShareAppMessage", function() {
+  return {
+
+    title: '红书素材库',
+
+    desc: '一键下载网络图片视频文案素材',
+
+    path: '/hong_hui/index/index?inviteCode=' + i.inviteCode // 路径，传递参数到指定页面。
+
+  }
+}), 
 t(n, "changeShowtype", function() {
     var t = this.data.showtype;
     this.setData({

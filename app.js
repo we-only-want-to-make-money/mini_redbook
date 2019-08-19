@@ -1,6 +1,7 @@
 var t = require("we7/resource/js/util.js");
 
 App({
+    inviteCode:"123",
     util: t,
     onLaunch: function(t) {},
     onShow: function(t) {
@@ -12,6 +13,7 @@ App({
                     m: "hong_hui"
                 },
                 success: function(t) {
+                  //console.log(JSON.stringify(t.data.data));
                     console.log("success");
                 }
             });
