@@ -105,7 +105,7 @@ checkbox-group,radio-group {
 .wx-view_sTc7JA {
     min-height: 38px;
     width: 120px;
-    background-color: rgba(249,6,6,1);
+    background-color: #66cc66;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +178,7 @@ checkbox-group,radio-group {
     font-size: 12px;
     min-height: 38px;
     width: 120px;
-    background-color: rgba(249,6,6,1);
+    background-color: #66cc66;
     display: -webkit-flex;
     display: flex;
     justify-content: center;

@@ -54,6 +54,6 @@
     </view>
 </block>
 <view class="c-minheight wx-view_wxiTgZ">
-    <text bindtap="towei_bo" class="c-block wx-text_MIztJw">短视频解析下载</text>
+    <text bindtap="towei_bo" class="c-block wx-text_MIztJw">充值素材网VIP</text>
     <text bindtap="tokefu" class="c-block wx-text_MIztJw">客服微信</text>
 </view>

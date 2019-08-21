@@ -135,6 +135,8 @@ util.base64_encode = function(e) {
         var t = {
             sessionid: "",
             wxInfo: "",
+            openid:"",
+            uid:"",
             memberInfo: ""
         };
         wx.login({
@@ -146,8 +148,9 @@ util.base64_encode = function(e) {
                     },
                     cachetime: 0,
                     success: function(n) {
-                        n.data.errno || (t.sessionid = n.data.data.sessionid, wx.setStorageSync("userInfo", t), 
-                        "function" == typeof e && e(t));
+                      n.data.errno || (t.sessionid = n.data.data.sessionid, t.uid = n.data.data.userinfo.uid, t.openid = n.data.data.openid, wx.setStorageSync("userInfo", t), 
+                      "function" == typeof e && e(t)
+);
                     }
                 });
             },

@@ -1,7 +1,7 @@
 var t = require("we7/resource/js/util.js");
 
 App({
-    inviteCode:"123",
+    inviteCode:"",
     util: t,
     onLaunch: function(t) {},
     onShow: function(t) {

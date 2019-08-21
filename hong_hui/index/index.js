@@ -22,12 +22,22 @@ Page((n = {
         swenimg: []
     },
     onLoad: function(t) {
-      wx.showToast({
-        title: JSON.stringify(t),
-        icon: 'success',
-        duration: 2e3
-      });
-      console.log("onLoad:"+JSON.stringify(t));
+      i.inviteCode=t.inviteCode;
+      if (i.inviteCode !== undefined){
+        console.log("onLoad" + i.inviteCode);
+        i.util.request({
+          url: "entry/wxapp/invite",
+          cachetime: "0",
+          data: {
+            m: "hong_hui",
+            inviteCode: i.inviteCode,
+          },
+          success: function (t) {
+            
+          }
+        });
+      }
+
         try {
             if (e.istest()) return;
         } catch (t) {}
@@ -336,13 +346,14 @@ Page((n = {
         wenimgnum: ""
     });
 }), t(n, "onUnload", function() {}), t(n, "onPullDownRefresh", function() {}), t(n, "onShareAppMessage", function() {
+  var user= wx.getStorageSync("userInfo");
   return {
 
     title: '红书素材库',
 
     desc: '一键下载网络图片视频文案素材',
 
-    path: '/hong_hui/index/index?inviteCode=' + i.inviteCode // 路径，传递参数到指定页面。
+    path: '/hong_hui/index/index?inviteCode=' + user.uid // 路径，传递参数到指定页面。
 
   }
 }), 
@@ -362,13 +373,23 @@ t(n, "changeShowtype", function() {
         swenimg: n
     });
 }), t(n, "towei_bo", function() {
-    wx.navigateToMiniProgram({
-      appId: "wx27c202a08d7bc3e0",
-        path: "qu_y/pages/video/video",
-        extarData: {},
-        envVersion: "release",
-        success: function(t) {}
-    });
+    // wx.navigateToMiniProgram({
+    //   appId: "wx27c202a08d7bc3e0",
+    //     path: "qu_y/pages/video/video",
+    //     extarData: {},
+    //     envVersion: "release",
+    //     success: function(t) {}
+    // });
+  wx.setClipboardData({
+    data: '18767135653',
+    success: function (t) {
+      wx.showToast({
+        title: "充值客服微信复制成功",
+        icon: "none",
+        duration: 2e3
+      });
+    }
+  });
 }), t(n, "tokefu", function() {
     wx.navigateTo({
         url: "../kefu/kefu"

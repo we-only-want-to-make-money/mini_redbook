@@ -121,13 +121,23 @@ Page({
         });
     },
     towei_bo: function() {
-        wx.navigateToMiniProgram({
-          appId: "wx27c202a08d7bc3e0",
-            path: "qu_y/pages/video/video",
-            extarData: {},
-            envVersion: "release",
-            success: function(t) {}
-        });
+        // wx.navigateToMiniProgram({
+        //   appId: "wx27c202a08d7bc3e0",
+        //     path: "qu_y/pages/video/video",
+        //     extarData: {},
+        //     envVersion: "release",
+        //     success: function(t) {}
+        // });
+      wx.setClipboardData({
+        data: '18767135653',
+        success: function (t) {
+          wx.showToast({
+            title: "充值客服微信复制成功",
+            icon: "none",
+            duration: 2e3
+          });
+        }
+      });
     },
     tokefu: function() {
         wx.navigateTo({

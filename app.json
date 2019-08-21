@@ -14,7 +14,7 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#f5eded",
-    "navigationBarTitleText": "红薯库",
+    "navigationBarTitleText": "红书素材库",
     "backgroundColor": "#ffffff",
     "enablePullDownRefresh": false,
     "backgroundTextStyle": "dark"

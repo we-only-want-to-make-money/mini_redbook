@@ -30,22 +30,7 @@
             <text class="c-block wx-text_1coBlw">客服及教程</text>
             <image class="wx-image_olsNIn" mode="scaleToFill" src="http://qty83k.creatby.com/materials/104133/origin/df54621333b3ea99565697a7f6bc70bc_origin.png"></image>
         </view>
-        <view class="c-minheight wx-view_D7Lgdd"></view>
-        <button bindtap="charge">充值</button>
-        <view class="c-minheight wx-view_wNakqa">
-                <button class=" wx-view-charge" bindtap="charge" data-amount='10'>
-                    <text class="c-block wx-text_ohl43r" style="font-size:12px">￥:10
-1月VIP</text>
-                </button>
-                <button class=" wx-view-charge" bindtap="charge" data-amount='50'>
-                    <text class="c-block wx-text_ohl43r" style="font-size:12px">￥:50
-半年VIP</text>
-                </button>
-                <button class=" wx-view-charge" bindtap="charge" data-amount='90'>
-                    <text class="c-block wx-text_ohl43r" style="font-size:12px">￥:90
-1年VIP</text>
-                </button>
-        </view>
+        
     </view>
 </block>
 <view class="top" wx:if="{{auth==2}}">
@@ -54,6 +39,6 @@
         <text class="c-block wx-text_zA9Sxd" style="margin-top:20px;">个人中心页面需获取用户信息授权</text>
     </view>
     <view style="margin-top:20px;padding:20px;">
-        <button bindgetuserinfo="bindGetUserInfo" openType="getUserInfo" style="background-color:rgba(249,6,6,1);color:#ffffff;">微信登录</button>
+        <button bindgetuserinfo="bindGetUserInfo" openType="getUserInfo" style="background-color:#66cc66;color:#ffffff;">微信登录</button>
     </view>
 </view>
