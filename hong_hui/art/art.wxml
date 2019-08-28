@@ -1,6 +1,6 @@
 <view class="c-minheight wx-view_SQ4g8q">
-    <image class="wx-image_qNznLo" mode="scaleToFill" src="/resources/logo.png"></image>
-    <text class="c-block wx-text_zA9Sxd">我们专注素材下载</text>
+    <image class="wx-image_qNznLo" mode="scaleToFill" src="/resources/logo.jpg"></image>
+    <text class="c-block wx-text_zA9Sxd">素材一键下载</text>
 </view>
 <view class="c-minheight wx-view_cwapW7">
     <view class="c-minheight wx-view_cyXTEB">
@@ -54,6 +54,6 @@
     </view>
 </block>
 <view class="c-minheight wx-view_wxiTgZ">
-    <text bindtap="towei_bo" class="c-block wx-text_MIztJw">充值素材网VIP</text>
+    <!-- <text bindtap="towei_bo" class="c-block wx-text_MIztJw">充值素材网VIP</text> -->
     <text bindtap="tokefu" class="c-block wx-text_MIztJw">客服微信</text>
 </view>

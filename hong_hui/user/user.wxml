@@ -7,12 +7,12 @@
         <text class="c-block wx-text_hRY8H3">用户:{{usermes.name}}</text>
         <block wx:if="{{usermes.show==2&&usermes.show4==4}}">
             <view class="c-minheight wx-view_PIJ3fu"></view>
-            <view class="c-minheight wx-view_tQXbEc">
+            <!-- <view class="c-minheight wx-view_tQXbEc">
                 <view class="c-minheight wx-view_29AWiW">
                     <text class="c-block wx-text_IwcrWU" wx:if="{{usermes.type==1}}">到期时间：{{usermes.mes}}</text>
                     <text class="c-block wx-text_IwcrWU" wx:if="{{usermes.type==2}}">本月剩余次数：{{5-usermes.mes}}次</text>
                 </view>
-            </view>
+            </view> -->
             <view class="c-minheight wx-view_PIJ3fu"></view>
             <view class="c-minheight wx-view_tQXbEc">
                 <text class="c-block wx-text_PI9vm5">联系客服</text>
